@@ -10,7 +10,13 @@ public class PropertyUtil {
 	private static Properties props = null;
 	
 	static {
-		props = PropertyLoaderUtil.loadPackageProperties("/prop/data.properties");
+		try {
+			//props = PropertyLoaderUtil.loadResourceProperties("com/corejava/utility/data.properties");			
+			props = PropertyLoaderUtil.loadPackageProperties("/prop.properties");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public static String getProperty(String propName) {
