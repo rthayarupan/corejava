@@ -7,7 +7,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		System.out.println(PropertyUtil.getProperty("provider.class"));
+		System.out.println(PropertyUtil.getProperty("renderer.class"));
 		
 	}
 
